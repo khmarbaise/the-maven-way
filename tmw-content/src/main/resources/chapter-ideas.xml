@@ -14,8 +14,8 @@
     <para>What is a release from the Maven point of view? 
     <emphasis>The Maven Way</emphasis> is about to start with a version
     which has a <literal>-SNAPSHOT</literal> postfix added. This identifies
-    this version as a so called SNAPSHOT-release. To be honest the word release
-    in this case does not make really sense. Let use assume the following
+    this version as a so called SNAPSHOT-release<footnote><para>To be honest the word release
+    in this case does not make really sense</para></footnote>. Let use assume the following
     SNAPSHOT-release <literal>1.0.0-SNAPSHOT</literal>. You can deploy
     a SNAPSHOT-release everytime you changed something in your project which 
     also can be used as a dependency in other projects. Everytime you deploy
