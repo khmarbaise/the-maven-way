@@ -109,3 +109,4 @@ Unsorted information:
   
   * http://www.sonatype.com/people/2011/07/the-best-maven-how-tos-from-the-sonatype-blog/
   
+  * http://www.dzone.com/links/r/maven_site_tips_maven_fluido_skin_and_javadoc_cla.html
