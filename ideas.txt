@@ -1,0 +1,80 @@
+- The purpose of the book
+
+    Take a deep look into the discussion (good ideas)
+  - http://maven.40175.n5.nabble.com/The-Maven-Way-td5646634.html
+     http://zeroinsertionforce.blogspot.de/2012/04/maven-does-not-suck-but-maven-docs-do.html
+
+     from the above thread on the maven users list:
+		* a  collection of patterns / anti-patterns in the use of Maven,
+		* documentation on the "Do's and Dont's" when using Maven,
+		* documentation of the best practices implemented by Maven,
+		* documentation of basic assumptions in Maven. 
+
+  - What does CoC mean?
+
+    Convention over Configuration?
+
+  - What kind of conventions do exist?
+
+    - What is the purpose of SNAPSHOT's / Releases
+      Which kind of assumptions are behind this concept?
+      What is a release in the meaning of Maven?
+
+    - Repository Manager
+      - Releases / SNAPSHOT's 
+        Should we delete releases / SNAPSHOT's.
+        
+
+    - One Module/Project one Artifact ?
+      - is this true ? 
+
+
+    - Should we use build number like systems ?
+
+
+    - Pinn version numbers of plugins as well as dependencies
+      - company pom needed.
+
+    - Conventions
+
+      - Folder structure
+
+        - usual project, war project,... 
+
+    - Why should we create separate modules ?
+      - under which circumstances ?
+      - 
+
+    - Why can't i change the name in repository?
+      via finalName (Relation: buildNumber's etc.)
+
+    - The Maven Way:
+
+      - Multiple Modules.
+        When does a multi-module build make sense and when it doesn't ?
+      - Structuring
+        - flatten structure and why they are not the best..
+           http://stackoverflow.com/questions/10452444/how-to-restructure-maven-multi-module-project
+
+      - release cycle ?
+
+      - http://stackoverflow.com/questions/10190272/how-to-generate-jar-and-war-both-in-project
+
+    - http://stackoverflow.com/questions/9797334/maven-detect-multiple-versions-of-the-same-dependency
+
+    - Company POM
+      Why and how to create one?
+
+    - Profiles are Evil ?
+      Why? Advantages / Disadvantages ?
+
+      What other solutions exist to make a build configurable for
+      different environments ?  -> see following 
+
+       - Exclude Files from jar which is used in a war project?
+          - Describe different solutions => My Blog Entry 
+
+  DistributionManagement
+
+  http://stackoverflow.com/questions/10238367/moving-a-project-to-maven-central
+

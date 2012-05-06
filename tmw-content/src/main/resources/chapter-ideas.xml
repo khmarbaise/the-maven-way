@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+                      "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd">
+<chapter id="tmw-ideas">
+  <title>Ideas behind Maven</title>
+
+  <para>
+   What is in the Maven meaing a release? What are SNAPSHOT's for etc.
+  </para>
+
+  <section>
+    <title>Releases and Snapshots</title>
+
+    <para>What is a release from the Maven point of view? 
+    <emphasis>The Maven Way</emphasis> is about to start with a version
+    which has a <literal>-SNAPSHOT</literal> postfix added. This identifies
+    this version as a so called SNAPSHOT-release. To be honest the word release
+    in this case does not make really sense. Let use assume the following
+    SNAPSHOT-release <literal>1.0.0-SNAPSHOT</literal>. You can deploy
+    a SNAPSHOT-release everytime you changed something in your project which 
+    also can be used as a dependency in other projects. Everytime you deploy
+    an other SNAPSHOT this means the earlier one will get invalid. 
+    But based on the SNAPSHOT identity you can't be sure which exact state of 
+    your project this SNAPSHOT represents. So SNAPSHOT's are only intended 
+    during the development. After you have finished your development you will 
+    make a release out of it. This will change the earlier mentioned 
+    <literal>1.0.0-SNAPSHOT</literal> into <literal>1.0.0</literal>.
+    </para>
+  </section>
+
+  <section>
+    <title>Releases and Snapshots</title>
+
+    <para>What is the concept of a SNAPSHOT?</para>
+    <para>What is a release from the Maven point of view?</para>
+  </section>
+</chapter>

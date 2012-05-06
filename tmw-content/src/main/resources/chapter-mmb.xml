@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+                      "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd">
+<chapter id="tmw-mmb">
+  <title>Multi Module Builds</title>
+
+  <para>
+    This is a chapter about Multi-Module Builds <abbrev>MMB</abbrev>.    
+  </para>
+
+  <section>
+    <title>The Default (Simple) Multi-Module-Build</title>
+
+    <para>
+    Define the default of a MMB. 
+    Structure (folder layout)
+    Version usage.
+    
+    <programlisting>+-- parent (pom.xml)
+      +--- module-1 (pom.xml)
+      +--- module-2 (pom.xml)
+      +--- module-3 (pom.xml)
+      ...    ...
+      +--- module-n (pom.xml)
+    </programlisting>
+    </para>
+
+  </section>
+
+  <section>
+    <title>The Complex Multi-Module-Build</title>
+
+    <para>
+    Structure (folder layout)
+    Version usage.
+    <programlisting>+-- parent (pom.xml)
+      +--- module-1 (pom.xml)
+               +--- module-1-1 (pom.xml)
+               +--- module-1-2 (pom.xml)
+      +--- module-2 (pom.xml)
+      +--- module-3 (pom.xml)
+               +--- module-3-1 (pom.xml)
+               +--- module-3-2 (pom.xml)
+      ...    ...
+      +--- module-n (pom.xml)
+    </programlisting>
+    </para>
+
+  </section>
+
+  <section>
+    <title>The Ugly Multi-Module-Build</title>
+
+    <para>
+    Structure (folder layout)
+    Version usage.
+    <programlisting>+-- root (pom.xml)
+      +--- parent (pom.xml)
+             ...   
+      +--- module-1 (pom.xml)
+      +--- module-2 (pom.xml)
+             ...
+      +--- module-n (pom.xml)
+    </programlisting>
+    </para>
+
+  </section>
+
+  <section>
+    <title>The Multi-Module-Builds and Version Control</title>
+
+    <para>
+    Separated modules are in separated repositories (in particular in DVCS like Git) or
+    just submodules with git? Is this the right direction?
+    </para>
+
+  </section>
+
+  <section>
+    <title>When you shouldn't use a MMB?</title>
+
+    <para>Try to explain under which circumstances you shouldn't use MMB?
+    which reasons exist? separate deployment ? separate release cycles?
+    </para>
+  </section>
+
+  <section>
+    <title>MMB vs. Inheritance</title>
+
+    <para>aggregation?
+    </para>
+  </section>
+</chapter>

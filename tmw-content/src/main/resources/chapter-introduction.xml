@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+                      "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd">
+<chapter id="tmw-intro">
+  <title>Introduction</title>
+
+  <para>The ideas of this book is to describe the conventions
+    and the so called Maven Way in doing things in relationship
+    with Maven.
+  </para>
+  <para>I'm trying not to dive to deep into configuration details
+    of Maven cause they have been well documented already. Ok ok. I'm
+    not telling the whole truth, cause in some areas I can't
+    avoid that to transfer a better understanding of the why and
+    why not.
+  </para>
+
+  <para>If you are working with Maven and in particular in having
+    problems and asking questions in forums or other popular areas
+    like StackOverflow etc. you will often hear the phrase: Don't do
+    it this way. You should go "The Maven Way."
+  </para>
+  <para>But what exactly is "The Maven Way"?</para>
+
+  <section>
+    <title>Adding New Developers to Projects</title>
+
+    <para>What we need to describe.</para>
+  </section>
+</chapter>

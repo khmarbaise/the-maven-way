@@ -1,0 +1,174 @@
+<project
+  xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.soebes.maven.books</groupId>
+  <artifactId>tmw</artifactId>
+  <version>0.1.0-SNAPSHOT</version>
+  <packaging>pom</packaging>
+
+  <name>The Maven Way Book :: parent.</name>
+  <description>The Book about the "Maven Way" of Maven</description>
+
+  <url>http://www.the-maven-way.com/book</url>
+
+  <organization>
+    <name>SofwareEnwicklung Beratung Schulung</name>
+    <url>http://www.soebes.com</url>
+  </organization>
+
+  <properties>
+    <docbkx-tools.version>2.0.14</docbkx-tools.version>
+
+    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+
+  <developers>
+    <developer>
+      <id>khmarbaise</id>
+      <name>Karl Heinz Marbaise</name>
+      <email>info@soebes.de</email>
+      <organization>SoEBeS</organization>
+      <organizationUrl>http://www.soebes.de</organizationUrl>
+      <roles>
+        <role>Author</role>
+      </roles>
+    </developer>
+  </developers>
+
+
+  <modules>
+    <module>tmw-content</module>
+    <module>tmw-pdf</module>
+    <module>tmw-epub</module>
+    <!-- <module>tmw-html</module> -->
+  </modules>
+
+  <profiles>
+    <profile>
+      <id>publish</id>
+      <distributionManagement>
+        <site>
+          <id>soebes-site</id>
+          <name>The Maven Way</name>
+          <url>scp://site@books.soebes.com/site/books/release/the-maven-way/parent</url>
+        </site>
+      </distributionManagement>
+    </profile>
+  </profiles>
+
+  <build>
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-install-plugin</artifactId>
+          <version>2.3.1</version>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-jar-plugin</artifactId>
+          <version>2.3.1</version>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-compiler-plugin</artifactId>
+          <version>2.3.2</version>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-release-plugin</artifactId>
+          <version>2.2.2</version>
+        </plugin>
+        <plugin>
+          <groupId>com.agilejava.docbkx</groupId>
+          <artifactId>docbkx-maven-plugin</artifactId>
+          <version>${docbkx-tools.version}</version>
+        </plugin>
+        <plugin>
+          <groupId>com.agilejava.docbkx</groupId>
+          <artifactId>docbkx-fop-support</artifactId>
+          <version>${docbkx-tools.version}</version>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-resources-plugin</artifactId>
+          <configuration>
+            <escapeString>\</escapeString>
+            <encoding>UTF-8</encoding>
+          </configuration>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <configuration>
+          <source>1.5</source>
+          <target>1.5</target>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-release-plugin</artifactId>
+        <configuration>
+          <allowTimestampedSnapshots>true</allowTimestampedSnapshots>
+          <autoVersionSubmodules>true</autoVersionSubmodules>
+          <goals>clean compile install site-deploy</goals>
+          <releaseProfiles>publish</releaseProfiles>
+          <preparationGoals>clean install</preparationGoals>
+          <useReleaseProfile>false</useReleaseProfile>
+        </configuration>
+        <dependencies>
+          <dependency>
+            <groupId>org.apache.maven.scm</groupId>
+            <artifactId>maven-scm-provider-gitexe</artifactId>
+            <version>1.2</version>
+          </dependency>
+        </dependencies>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-scm-plugin</artifactId>
+        <version>1.2</version>
+        <dependencies>
+          <dependency>
+            <groupId>org.apache.maven.scm</groupId>
+            <artifactId>maven-scm-provider-gitexe</artifactId>
+            <version>1.2</version>
+          </dependency>
+        </dependencies>
+      </plugin>
+    </plugins>
+    <extensions>
+      <extension>
+        <groupId>org.apache.maven.wagon</groupId>
+        <artifactId>wagon-ssh</artifactId>
+        <version>1.0</version>
+      </extension>
+    </extensions>
+  </build>
+  <scm>
+    <connection>scm:git:git://github.com/khmarbaise/the-maven-way.git</connection>
+    <url>scm:git:git://github.com/khmarbaise/the-maven-way.git</url>
+    <developerConnection>scm:git:git://github.com/khmarbaise/the-maven-way.git</developerConnection>
+  </scm>
+  <distributionManagement>
+    <repository>
+      <id>releases</id>
+      <name>SoEBeS Releases</name>
+      <url>http://78.46.16.202:8080/content/repositories/releases</url>
+    </repository>
+    <snapshotRepository>
+      <id>snapshots</id>
+      <name>SoEBeS Snapshot</name>
+      <url>http://78.46.16.202:8080/content/repositories/snapshots</url>
+    </snapshotRepository>
+  </distributionManagement>
+
+</project>

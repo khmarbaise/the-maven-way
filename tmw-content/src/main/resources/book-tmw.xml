@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+                      "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd">
+<book id="book-tmw">
+  <?dbhtml filename="index.html"?>
+
+  <title>The Maven Way</title>
+
+  <bookinfo>
+    <isbn>${book.isbn}</isbn>
+
+    <edition>${project.version}</edition>
+
+    <author>
+      <surname>${project.organization.name}</surname>
+    </author>
+
+    <editor>
+      <othername>Karl Heinz Marbaise</othername>
+    </editor>
+
+    <copyright>
+      <year>${release.year}</year>
+
+      <holder>${org.name}</holder>
+    </copyright>
+
+    <date>${release.date}</date>
+
+    <publisher>
+      <publishername>SoftwareEntwicklung Beratung Schulung</publishername>
+
+      <address>
+          <street>${org.addr}</street>
+          <city>${org.city}</city>
+          <state>${org.state}</state>
+          <postcode>${org.zip}</postcode>
+      </address>
+    </publisher>
+
+    <abstract>
+      <para>A book about The Maven-Way</para>
+    </abstract>
+
+  </bookinfo>
+
+  <xi:include
+    href="copyright.xml"
+    xmlns:xi="http://www.w3.org/2001/XInclude" />
+
+  <!--
+    <xi:include href="foreword.xml" xmlns:xi="http://www.w3.org/2001/XInclude" />
+
+    <xi:include href="chapter-preface.xml"
+    xmlns:xi="http://www.w3.org/2001/XInclude" />
+
+    <xi:include href="chapter-introduction.xml"
+    xmlns:xi="http://www.w3.org/2001/XInclude" />
+  -->
+
+
+
+  <xi:include
+    href="chapter-introduction.xml"
+    xmlns:xi="http://www.w3.org/2001/XInclude" />
+
+  <xi:include
+    href="chapter-ideas.xml"
+    xmlns:xi="http://www.w3.org/2001/XInclude" />
+
+  <xi:include
+    href="chapter-coc.xml"
+    xmlns:xi="http://www.w3.org/2001/XInclude" />
+
+  <xi:include
+    href="chapter-mmb.xml"
+    xmlns:xi="http://www.w3.org/2001/XInclude" />
+
+  <part>
+    <title>Concepts about Maven</title>
+
+    <partintro>
+      <para>Concepts</para>
+    </partintro>
+    <!--
+      <xi:include href="chapter-introduction.xml"
+      xmlns:xi="http://www.w3.org/2001/XInclude" />
+    -->
+  </part>
+
+  <part>
+    <title>This is the next part</title>
+
+    <partintro>
+      <para>Here we describe the different ideas of CoC</para>
+    </partintro>
+    <!--
+      <xi:include href="chapter-coc-basic.xml"
+      xmlns:xi="http://www.w3.org/2001/XInclude" />
+    -->
+  </part>
+
+  <index></index>
+</book>

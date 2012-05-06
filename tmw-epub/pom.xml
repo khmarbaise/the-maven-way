@@ -1,0 +1,137 @@
+<project
+  xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>com.soebes.maven.books</groupId>
+    <artifactId>tmw</artifactId>
+    <version>0.1.0-SNAPSHOT</version>
+  </parent>
+
+  <artifactId>tmw-epub</artifactId>
+
+  <name>The Maven Way Book :: epub</name>
+  <build>
+    <resources>
+      <resource>
+        <directory>src/main/resources</directory>
+        <filtering>true</filtering>
+        <includes>
+          <include>epub-custom.xsl</include>
+        </includes>
+      </resource>
+    </resources>
+    <plugins>
+      <plugin>
+        <groupId>org.codehaus.cjcook</groupId>
+        <artifactId>docbook-plugin</artifactId>
+        <version>1.0</version>
+        <extensions>true</extensions>
+      </plugin>
+      <plugin>
+        <groupId>com.agilejava.docbkx</groupId>
+        <artifactId>docbkx-maven-plugin</artifactId>
+        <dependencies>
+          <dependency>
+            <groupId>net.sf.docbook</groupId>
+            <artifactId>docbook-xml</artifactId>
+            <version>5.0-all</version>
+            <classifier>resources</classifier>
+            <type>zip</type>
+          </dependency>
+        </dependencies>
+        <executions>
+          <execution>
+            <id>generate-epub</id>
+            <phase>compile</phase>
+            <goals>
+              <goal>generate-epub</goal>
+            </goals>
+          </execution>
+        </executions>
+        <configuration>
+          <sourceDirectory>${basedir}/target/docbook</sourceDirectory>
+          <targetDirectory>${basedir}/target/epub</targetDirectory>
+          <includes>book-suite.xml</includes>
+          <xincludeSupported>true</xincludeSupported>
+          <bookFile>${project.build.directory}/book-suite.epub</bookFile>
+          <htmlStylesheet>epub-custom.css</htmlStylesheet>
+          <epubCustomization>${basedir}/src/main/resources/epub-custom.xsl</epubCustomization>
+          <postProcess>
+            <!-- Copy the images -->
+<!--             <copy todir="${project.build.directory}/epub/figs/web"> -->
+<!--               <fileset dir="target/docbook/figs/web" /> -->
+<!--             </copy> -->
+<!--             <copy todir="${project.build.directory}/epub/covers"> -->
+<!--               <fileset dir="target/docbook/covers" /> -->
+<!--             </copy> -->
+            <copy
+              todir="${project.build.directory}/epub"
+              file="src/main/resources/epub-custom.css" />
+          </postProcess>
+        </configuration>
+      </plugin>
+      <plugin>
+        <artifactId>maven-dependency-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>unpack</id>
+            <phase>generate-sources</phase>
+            <goals>
+              <goal>unpack</goal>
+            </goals>
+            <configuration>
+              <artifactItems>
+                <artifactItem>
+                  <groupId>${project.groupId}</groupId>
+                  <artifactId>tmw-content</artifactId>
+                  <version>${project.version}</version>
+                </artifactItem>
+              </artifactItems>
+              <outputDirectory>${basedir}/target/docbook</outputDirectory>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-jar-plugin</artifactId>
+        <configuration>
+          <classesDirectory>${basedir}/target/epub</classesDirectory>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-install-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>install-epub</id>
+            <phase>install</phase>
+            <goals>
+              <goal>install-file</goal>
+            </goals>
+            <configuration>
+              <file>${basedir}/target/epub/book-tmw.epub</file>
+              <groupId>${project.groupId}</groupId>
+              <artifactId>${project.artifactId}</artifactId>
+              <version>${project.version}</version>
+              <packaging>epub</packaging>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+
+  </build>
+  <dependencies>
+    <dependency>
+      <groupId>${project.groupId}</groupId>
+      <artifactId>tmw-content</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+  </dependencies>
+
+</project>

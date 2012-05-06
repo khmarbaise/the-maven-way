@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+                      "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd">
+<chapter id="tmw-coc">
+  <title>Convention over Configuration</title>
+
+  <para>
+    You have read about Maven? Of course cause you did otherwise you
+    haven't been got in touch with this book. What has been the most named
+    paradigms? Yes "Convention over Configuration"
+    <abbrev>CoC</abbrev>
+    .
+    So you have already been infected with this "virus".
+    (Think about it.).
+  </para>
+  <para>
+    The question is what does CoC mean in relationship with Maven?
+    In this chapter we will go through different Conventions which
+    are used by Maven and give a more detailed explanation of the
+    intention behind that.
+  </para>
+
+  <section>
+    <title>The folder layout</title>
+
+    <para>If you start working with Maven you will think why in havens name
+      can't I change the location of the my sources, my unit tests etc. ?.      
+      <ulink url="http://maven.apache.org/guides/introduction/introduction-to-the-standard-directory-layout.html">The Standard Directory Layout</ulink>
+    </para>
+
+    <para>The answer to this question is based on the CoC paradigm. So
+      what's the advantage of such an approach?
+    </para>
+
+    <para>
+      So let us take a more detailed look into that. 
+
+      <programlisting>src/main/java <co id="co-id-src-main-java" linkends="co-le-id-src-main-java" />
+src/main/resources
+src/test/java
+src/test/resources
+src/main/javadoc
+src/test/javadoc
+  </programlisting>
+
+      <calloutlist>
+        <callout
+          arearefs="co-id-src-main-java"
+          id="co-le-id-src-main-java">
+          <para>In this location you have to put your production code.</para>
+        </callout>
+      </calloutlist>
+
+    </para>
+    <para>We have separated the production code (src/main/java), the unit test
+      code (<literal>src/test/java</literal>), the production resources
+      <literal>src/main/resources</literal> and test resources (src/test/resources). Furthermore
+      there are other areas for example the javadoc which has it's own location
+      in Maven (src/main/javadoc). (src/test/javadoc)
+    </para>
+    <para>Based on the experience I had it's good to separate the code in that
+      way. In earlier projects (long time ago) i have written a large
+      number of <ulink url="http://ant.apache.org">Ant</ulink> scripts to 
+      create such a default folder layout as well. 
+      But the problem i had often been faced with was the discussions with the
+      developers who like to have their source code in src instead
+      src/main/java or in sources etc. which often took us to endless
+      discussions but never got a real census.
+    </para>
+    <para>In Maven life is much easier. It simply has that CoC so they simply
+      accept that.
+    </para>
+    <para>The advantages of separating the parts of your project in 
+    <emphasis>The Maven Way</emphasis> is clear, cause you have a separted area
+    for production code, for test code and for their appropriate resources.
+    </para>
+  </section>
+
+  <section>
+    <title>Adding New Developers to Projects</title>
+
+    <para>What we need to describe.</para>
+  </section>
+</chapter>
