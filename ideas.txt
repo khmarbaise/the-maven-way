@@ -1,14 +1,15 @@
 - The purpose of the book
 
     Take a deep look into the discussion (good ideas)
-  - http://maven.40175.n5.nabble.com/The-Maven-Way-td5646634.html
-     http://zeroinsertionforce.blogspot.de/2012/04/maven-does-not-suck-but-maven-docs-do.html
-
+    http://maven.40175.n5.nabble.com/The-Maven-Way-td5646634.html
      from the above thread on the maven users list:
+
 		* a  collection of patterns / anti-patterns in the use of Maven,
 		* documentation on the "Do's and Dont's" when using Maven,
 		* documentation of the best practices implemented by Maven,
-		* documentation of basic assumptions in Maven. 
+		* documentation of basic assumptions in Maven.
+
+     http://zeroinsertionforce.blogspot.de/2012/04/maven-does-not-suck-but-maven-docs-do.html
 
   - What does CoC mean?
 
@@ -74,7 +75,37 @@
        - Exclude Files from jar which is used in a war project?
           - Describe different solutions => My Blog Entry 
 
+
+  * Dependency Management in general 
+    * What types of dependencies exist?
+    * How to use them?
+    * (using dependencyManagement? => Best practice part)?
+
+  * Good list of definitions of terms for Maven:
+  
+    * http://www.sonatype.com/people/2008/05/misused-maven-terms-defined/
+    
+  * Tips:
+    * http://www.sonatype.com/people/2008/04/how-to-override-a-plugins-dependency-in-maven/
+ 
+  * Best Practices:
+  
+    * http://www.sonatype.com/people/2009/01/best-practices-for-releasing-with-3rd-party-snapshot-dependencies/
+    * http://www.sonatype.com/people/2009/02/why-putting-repositories-in-your-poms-is-a-bad-idea/
+    * http://www.sonatype.com/people/2009/01/maven-continuous-integration-best-practices/
+    * http://www.sonatype.com/people/2008/05/optimal-maven-plugin-configuration/
+    * http://www.sonatype.com/people/2008/04/how-to-share-resources-across-projects-in-maven/ (check the http://maven.apache.org/plugins/maven-remote-resources-plugin/)
+    
   DistributionManagement
 
   http://stackoverflow.com/questions/10238367/moving-a-project-to-maven-central
 
+
+Unsorted information:
+
+  * http://www.dzone.com/links/r/build_version_maven_plugin_for_git.html
+  
+  * http://sampreshan.svashishtha.com/2012/04/30/converting-eclipse-workspace-to-maven-why-eclipse-to-maven/
+  
+  * http://www.sonatype.com/people/2011/07/the-best-maven-how-tos-from-the-sonatype-blog/
+  

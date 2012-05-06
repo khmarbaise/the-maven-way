@@ -73,33 +73,39 @@ src/test/javadoc
       src/main/java or in sources etc. or in any other thinkable location
       which often took us to endless discussions but never got a real census.
     </para>
-    <para>In Maven life is much easier. If you follow that 
+    <para>In Maven life is much easier. If you follow those 
       <emphasis>Convention</emphasis> you only need to put your production/test
       code into the appropriate folders and Maven will handle the compilation 
       and unit testing etc. out of the box.
       (Make the simplest pom.xml example??)
     </para>
+    <para>An other advantage is that every new developer which will come
+      along the the project need only to learn that structure or often
+      knew already the default Maven folder layout structure.</para>
 
     <para>The advantages of separating the parts of your project in 
-    <emphasis>The Maven Way</emphasis> is clear, cause you have a separated area
-    for production code, for test code and for their appropriate resources.
-    </para>
-    
-    
-    <para>The answer to this question is based on the <emphasis>Convention over
-      Configuration</emphasis> paradigm. The idea in this case to simplify the
-      overall usage. This means we don't need to configure the particular 
-      location of the sources.
-      the idea to have Convention which is used by everyone 
+      <emphasis>The Maven Way</emphasis> is clear, cause you have a separated area
+      for production code, for test code and for their appropriate resources.
     </para>
 
-    <para>That was <emphasis>Convention</emphasis> part of 
-      <emphasis>Convention over Configuration</emphasis> the but what's about the
-      <emphasis>Configuration</emphasis> part? This should be emphasized
+    <para>The answer to this question is based on the <emphasis>Convention over
+      Configuration</emphasis> paradigm. The idea in this case is to simplify the
+      overall usage. This means we don't need to configure the particular 
+      location of the sources.
+    </para>
+
+    <para>That was the <emphasis>Convention</emphasis> part of 
+      <emphasis>Convention over Configuration</emphasis> but what's about the
+      <emphasis>Configuration</emphasis> part? It should be emphasized
       with the word <emphasis>over</emphasis>. This means you can change the
       locations of your sources (either production or test code) and resources if
-      you need to but you should reconsider that multiple time. In other words
-      always give the convention precedence over configuration.
+      you need to but you should reconsider that multiple times. In other words
+      always give the convention precedence over configuration.</para>
+
+      <para>In particular if you are migrating an existing project from 
+      whatever build tool to Maven it might sometime be helpful to change the
+       locations by using the <emphasis>Configuration</emphasis> option of 
+       Maven but this should be done only as intermediate step.
     </para>
     
   </section>
