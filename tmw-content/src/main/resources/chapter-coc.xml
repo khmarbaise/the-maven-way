@@ -57,7 +57,7 @@ src/test/javadoc
     </para>
 
     <para>
-    We have separated the production code (src/main/java), the unit test
+      We have separated the production code (src/main/java), the unit test
       code (<literal>src/test/java</literal>), the production resources
       <literal>src/main/resources</literal> and test resources (src/test/resources). Furthermore
       there are other areas for example the javadoc which has it's own location
@@ -73,7 +73,7 @@ src/test/javadoc
       src/main/java or in sources etc. or in any other thinkable location
       which often took us to endless discussions but never got a real census.
     </para>
-    <para>In Maven life is much easier. If you follow those 
+    <para>In Maven life is much easier. If you follow this
       <emphasis>Convention</emphasis> you only need to put your production/test
       code into the appropriate folders and Maven will handle the compilation 
       and unit testing etc. out of the box.
@@ -96,16 +96,18 @@ src/test/javadoc
 
     <para>That was the <emphasis>Convention</emphasis> part of 
       <emphasis>Convention over Configuration</emphasis> but what's about the
-      <emphasis>Configuration</emphasis> part? It should be emphasized
-      with the word <emphasis>over</emphasis>. This means you can change the
+      <emphasis>Configuration</emphasis> part? We should emphasize
+      the word <emphasis>over</emphasis>. This means you can change the
       locations of your sources (either production or test code) and resources if
       you need to but you should reconsider that multiple times. In other words
       always give the convention precedence over configuration.</para>
 
-      <para>In particular if you are migrating an existing project from 
-      whatever build tool to Maven it might sometime be helpful to change the
-       locations by using the <emphasis>Configuration</emphasis> option of 
-       Maven but this should be done only as intermediate step.
+      <para>Out in the wild of course you will be faced with problems
+       during a migration of an existing project from 
+       whatever build tool to Maven. In such case it's useful
+       to use the <emphasis>Configuration</emphasis> option of 
+       Maven to solve the migration step, but this should be done only 
+       as an intermediate step.
     </para>
     
   </section>
