@@ -25,6 +25,21 @@
     during the development. After you have finished your development you will 
     make a release out of it. This will change the earlier mentioned 
     <literal>1.0.0-SNAPSHOT</literal> into <literal>1.0.0</literal>.
+    
+  <figure id="fig-releases-and-snapshots">
+        <title>Releases and SNAPSHOTS</title>
+
+        <mediaobject>
+          <imageobject role="web">
+            <imagedata fileref="images/releases-and-snapshots.png" />
+          </imageobject>
+
+          <imageobject role="print">
+            <imagedata fileref="images/releases-and-snapshots.pdf" />
+          </imageobject>
+        </mediaobject>
+      </figure>
+
     </para>
   </section>
 
