@@ -5,8 +5,32 @@
   <title>Multi Module Builds</title>
 
   <para>
-    This is a chapter about Multi-Module Builds <abbrev>MMB</abbrev>.    
+    This is a chapter about Multi-Module Builds (<abbrev>MMB</abbrev>).    
   </para>
+
+  <section>
+    <title>The Idea of a multi module build</title>
+
+    <para>The basic idea of a multi module build is to have a 
+      structure where i can put related modules together with
+      the same release cycle and the same version number. This
+      is usually the case if you are developing a JEE application,
+      which consist of a server, client and a web module.
+    </para>
+    
+    <para>This is also true if you have other related modules like
+      an application (command line), a core-module and may be model-module.
+      
+    <programlisting>+-- parent (pom.xml)
+      +--- cli (pom.xml)
+      +--- core (pom.xml)
+      +--- model (pom.xml)
+</programlisting>
+    
+    </para>
+      
+  </section>
+
 
   <section>
     <title>The Default (Simple) Multi-Module-Build</title>
@@ -77,17 +101,23 @@
   </section>
 
   <section>
-    <title>When you shouldn't use a MMB?</title>
+    <title>When you shouldn't use a multi module build?</title>
 
     <para>Try to explain under which circumstances you shouldn't use MMB?
     which reasons exist? separate deployment ? separate release cycles?
     </para>
+    <para>If you are coming to the point and saying. I would like to
+       release module A as version 1.0 whereas module B should be released as
+       version 1.2.</para>
+     <para>The above is exactly an indication that you should not use a multi 
+     module build. This will be handled by usual separated modules with their
+     own release cycles. This does not prevent you in using interproject
+     dependencies.</para>
   </section>
 
   <section>
     <title>MMB vs. Inheritance</title>
 
-    <para>aggregation?
-    </para>
+    <para>aggregation? </para>
   </section>
 </chapter>
