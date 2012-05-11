@@ -108,10 +108,20 @@
     </para>
     <para>If you are coming to the point and saying. I would like to
        release module A as version 1.0 whereas module B should be released as
-       version 1.2.</para>
+       version 1.2 (see prog listing? reference?)
+       
+     <programlisting>+-- parent (pom.xml)
+  +--- module-A (pom.xml)
+  +--- module-B (pom.xml)
+  +--- module-C (pom.xml)
+  ...    ...
+  +--- module-X (pom.xml)
+</programlisting>
+       
+     </para>
      <para>The above is exactly an indication that you should not use a multi 
      module build. This will be handled by usual separated modules with their
-     own release cycles. This does not prevent you in using interproject
+     own release cycles. This does not prevent you in using inter project
      dependencies.</para>
   </section>
 
