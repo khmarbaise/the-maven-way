@@ -91,6 +91,24 @@
   </section>
 
   <section>
+    <title>The Flattened Multi-Module-Build</title>
+
+    <para>
+    The structure flattened into a single level folders.
+    
+    <programlisting>+-- root (pom.xml)
++--- parent (pom.xml)
+       ...   
++--- module-1 (pom.xml)
++--- module-2 (pom.xml)
+       ...
++--- module-n (pom.xml)
+    </programlisting>
+    </para>
+
+  </section>
+
+  <section>
     <title>The Multi-Module-Builds and Version Control</title>
 
     <para>
