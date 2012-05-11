@@ -56,6 +56,8 @@
       - Structuring
         - flatten structure and why they are not the best..
            http://stackoverflow.com/questions/10452444/how-to-restructure-maven-multi-module-project
+           Take a look here:
+           http://stackoverflow.com/questions/10540977/fully-automate-release-procedure-with-releaseversions-plugins
 
       - release cycle ?
 
