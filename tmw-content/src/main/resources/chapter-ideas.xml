@@ -19,7 +19,7 @@
     SNAPSHOT-release <literal>1.0.0-SNAPSHOT</literal>. You can deploy
     a SNAPSHOT-release everytime you changed something in your project which 
     also can be used as a dependency in other projects. Everytime you deploy
-    an other SNAPSHOT this means the earlier one will get invalid. 
+    an other SNAPSHOT this means the earlier one will get invalid (see Repository Manager!) 
     But based on the SNAPSHOT identity you can't be sure which exact state of 
     your project this SNAPSHOT represents. So SNAPSHOT's are only intended 
     during the development. After you have finished your development you will 
@@ -28,14 +28,13 @@
     
   <figure id="fig-releases-and-snapshots">
         <title>Releases and SNAPSHOTS</title>
-
         <mediaobject>
           <imageobject role="web">
-            <imagedata fileref="images/releases-and-snapshots.png" />
+            <imagedata fileref="images/releases-and-snapshots.png" format="PNG" />
           </imageobject>
 
           <imageobject role="print">
-            <imagedata fileref="images/releases-and-snapshots.pdf" />
+            <imagedata fileref="images/releases-and-snapshots.pdf" format="PDF" />
           </imageobject>
         </mediaobject>
       </figure>
