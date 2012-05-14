@@ -80,11 +80,11 @@ src/test/javadoc
       (Make the simplest pom.xml example??)
     </para>
     <para>An other advantage is that every new developer which will come
-      along the the project need only to learn that structure or often
+      along the project need only to learn that structure or often
       knew already the default Maven folder layout structure.</para>
 
     <para>The advantages of separating the parts of your project in 
-      <emphasis>The Maven Way</emphasis> is clear, cause you have a separated area
+      <emphasis>The Maven Way</emphasis> is clear, cause you have separated areas
       for production code, for test code and for their appropriate resources.
     </para>
 
@@ -109,12 +109,32 @@ src/test/javadoc
        Maven to solve the migration step, but this should be done only 
        as an intermediate step.
     </para>
+
+    <para>So this was the first part of the <emphasis>Convention</emphasis>,
+       but what is about the results which are created out of the source- 
+       and test code? The compiled classes are put under the target/classes 
+       folder whereas the compiled test classes will be put into 
+       <literal>target/test-classes</literal>
+       and their appropriate resources will be put into 
+       <literal>target/classes</literal> vs. 
+       <literal>target/test-classes</literal>. 
+    </para>
     
   </section>
 
   <section>
-    <title>XXXXX</title>
+    <title>One Module &dash; One Artifact</title>
 
-    <para>The is something we need to describe.</para>
+    <para>Usually you will read the statement having a single module
+      means to have a single artifact as result.</para>
+    <para>This is as mentioned before usually the truth but not always.
+     A typical example for an exception to this <emphasis>Convention</emphasis>
+      is to use the maven-assembly-plugin to produce multiple archives like
+     .tar.gz, and .zip archive within a single module. This is basically 
+     a good guideline but can be changed if needed.</para>
+    <para>There are servral other exaception. Multi-environment
+    configuration (jar/war for dev, test prod etc.) add examples.
+    </para>
+  
   </section>
 </chapter>

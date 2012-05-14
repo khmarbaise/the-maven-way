@@ -21,26 +21,24 @@
       Which kind of assumptions are behind this concept?
       What is a release in the meaning of Maven?
 
+    - One Module/Project one Artifact ?
+      - is this true ? 
+
+
+    - Folder structure
+      - usual project, war project,... 
+
+
     - Repository Manager
       - Releases / SNAPSHOT's 
         Should we delete releases / SNAPSHOT's.
         
-
-    - One Module/Project one Artifact ?
-      - is this true ? 
-
 
     - Should we use build number like systems ?
 
 
     - Pinn version numbers of plugins as well as dependencies
       - company pom needed.
-
-    - Conventions
-
-      - Folder structure
-
-        - usual project, war project,... 
 
     - Why should we create separate modules ?
       - under which circumstances ?
