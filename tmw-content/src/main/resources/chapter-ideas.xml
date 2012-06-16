@@ -32,10 +32,6 @@
           <imageobject role="web">
             <imagedata fileref="images/releases-and-snapshots.png" format="PNG" />
           </imageobject>
-
-          <imageobject role="print">
-            <imagedata fileref="images/releases-and-snapshots.pdf" format="PDF" />
-          </imageobject>
         </mediaobject>
       </figure>
 
